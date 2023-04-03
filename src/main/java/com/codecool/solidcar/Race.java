@@ -13,7 +13,6 @@ public class Race {
     }
 
     public int calculateFuel(){
-        if(cars == null) return 0;
         int fuel = 0;
         for(Car car: cars) {
             if(car instanceof Ford) {
