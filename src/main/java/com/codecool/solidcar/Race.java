@@ -12,19 +12,17 @@ public class Race {
         this.cars = cars;
     }
 
-    public int calculateFuel(){
+    public int calculateFuel() {
         int fuel = 0;
-        for(Car car: cars) {
-            if(car instanceof Ford) {
-                fuel += 4;
-            }
-
-            if(car instanceof Ferrari) {
-                fuel += 2;
-            }
+        for (Car car : cars) {
+            car.consumeFuelPerLap();
+            fuel += car.getConsumptedFuel();
         }
+
         return numberOfLaps * fuel;
-    };
+    }
+
+    ;
 
 }
 
