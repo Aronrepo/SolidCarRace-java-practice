@@ -13,6 +13,10 @@ public class Race {
     }
 
     public int calculateFuel() {
+        if (cars == null) {
+            return 0;
+        }
+
         int fuel = 0;
         for (Car car : cars) {
             car.consumeFuelPerLap();
@@ -22,7 +26,6 @@ public class Race {
         return numberOfLaps * fuel;
     }
 
-    ;
 
 }
 
